@@ -42,7 +42,13 @@
                 <li class="breadcrumb-item active">Research</li>
             </ol>
         </div>
+        <div class="row row-content align-items-center">
+            <ol class="col-12 col-sm-12 col-md-12">
+                <div id="rss-feeds"></div>
+            </ol>
+        </div>
     </div>
+
 
 
     <footer class="footer">
@@ -91,7 +97,13 @@
     <script src="../assets/js/lib/jquery.min.js"></script>
     <script src="../assets/js/lib/popper.min.js"></script>
     <script src="../assets/js/lib/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../assets/js/scraper.js"></script>
-    <script type="text/javascript" src="../assets/js/utils.js"></script>
+    <script src="../assets/js/lib/moment.min.js"></script>
+    <script src="../assets/js/lib/jquery.rss.min.js"></script>
+    <script>
+            jQuery(function($) {
+                $("#rss-feeds").rss("http://export.arxiv.org/rss/math.QA")
+            });
+      </script>
+  
 </body>
 </html>
