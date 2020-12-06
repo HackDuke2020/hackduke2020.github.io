@@ -4,10 +4,17 @@ async function getData() {
         if (this.readyState == XMLHttpRequest.DONE) {
             var data = CSVToArray(this.responseText);
             console.log(data[247]); // us data
-            var usData = data[247].slice(4);
+            var usData = data[247].slice(44);
             var usData = usData.map(function (x) {
                 return Number(x);
             });
+            
+            var dailyData = []
+            for (let i=1; i<usData.length; i++) {
+                dailyData.push(usData[i]-usData[i-1]);
+            }
+
+            usData = dailyData;
 
 
             async function vis(){
@@ -16,11 +23,13 @@ async function getData() {
             
                 console.log(model);
                 var predArr = [];
-                for (let i=0; i<usData.length-10; i++) {
-                    predArr.push(usData.slice(i, i+10));
+                for (let i=10; i<usData.length; i++) {
+                    predArr.push(usData.slice(i-10, i));
                 }
 
                 const x = tf.tensor(predArr);
+                console.log("x data");
+                x.print();
                 const axis = 2;
                 // x.expandDims(axis).print();
 
@@ -32,7 +41,7 @@ async function getData() {
                 pred.print();
                 const values = pred.dataSync();
                 var predVis = Array.from(values).map(function (x) {
-                    return x * 10e6;
+                    return x * 10e4;
                 });
 
                 console.log(usData);
