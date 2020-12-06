@@ -65,8 +65,7 @@ function CSVToArray( strData, strDelimiter ){
 
 function contentDisplay(className) {
     var x = document.getElementsByClassName(className);
-    var i;
-    for (i = 0; i < x.length; i++) {
+    for (let i = 0; i < x.length; i++) {
         if (x[i].style.display === "none") {
             x[i].style.display = "table-row";
           } else {

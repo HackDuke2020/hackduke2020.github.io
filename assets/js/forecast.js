@@ -64,6 +64,14 @@ async function getData() {
                     usDataVis.push([dateString, usData[i]*10e6, predVis[i]-35000]);
                 }
                 console.log(usDataVis);
+
+                var loading = document.getElementsByClassName("loading");
+                console.log(loading);
+                for (let i = 0; i < loading.length; i++) {
+                    console.log(loading[i].style)
+                    loading[i].style.display = "none";
+                }
+    
                 
                 google.charts.load('current', {'packages':['corechart']});
                 google.charts.setOnLoadCallback(drawChart);
