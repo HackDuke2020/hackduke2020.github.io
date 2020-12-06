@@ -19,7 +19,7 @@ On the landing page, we have embedded an overview of current case counts, an inf
 
 The last two sections are for updated information from WHO and newest COVID-19 data from Johns Hopkins University, respectively. We have intentionally included them so that users could instantly access those crucial information sources and, if they wish to, delve deeper into a wide source of covid-related data. 
 
-### The Journey: what worked, what didn’t, and what we learned
+### The Journey: What worked, What didn’t, and What we learned
 
 We have achieved all the features we initially planned, which are described in the section above. 
 
