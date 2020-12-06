@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <link rel="icon" type="image/jpg" href="assets/images/icon.jpg" sizes="16x16">
+    <link rel="stylesheet" href="assets/stylesheets/stylesheet.css">
+    <link rel="stylesheet" href="assets/stylesheets/lib/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+    <link rel="stylesheet" href="assets/stylesheets/lib/bootstrap-social.min.css">
+
+
+
+    <title>Coronavirus Updates</title>
+</head>
+
+<body onload=scrapeJHUData()>
+
+    <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target='#Navbar'>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="Navbar">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active"><a class="nav-link" href="#"><span class="fa fa-home fa-lg"></span> Home </a></li>
+                    <li class="nav-item"><a class="nav-link" href="components/forecast.html"><span class="fa fa-info fa-lg"></span> Forecast </a></li>
+                    <li class="nav-item"><a class="nav-link" href="components/vis.html"><span class="fa fa-chart-area fa-lg"></span> Visualization </a></li>
+                    <li class="nav-item"><a class="nav-link" href="components/news.html"><span class="fa fa-newspaper fa-lg"></span> News </a></li>
+                    <li class="nav-item"><a class="nav-link" href="components/research.html"><span class="fa fa-book fa-lg"></span> Research </a></li>
+                    <li class="nav-item"><a class="nav-link" href="components/policy.html"><span class="fa fa-balance-scale fa-lg"></span> Policy </a></li>
+                    <li class="nav-item"><a class="nav-link" href="components/market.html"><span class="fa fa-dollar-sign fa-lg"></span> Market </a></li>
+                    <li class="nav-item"><a class="nav-link" href="components/who_updates.html"><span class="fa fa-hospital fa-lg"></span> WHO Updates </a></li>
+                    <li class="nav-item"><a class="nav-link" href="components/charts.html"><span class="fa fa-chart-bar fa-lg"></span> Charts </a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <header class="jumbotron">
+        <div class="container">     
+            <div class="row row-header">
+                <div class="col-12 col-sm-6">
+                    <h1>Cornovirus Tracking Website</h1>
+                    <p>Published by HackDuke Team.</p>
+                </div>
+                <div class="col-12 col-sm-3 align-self-center">
+                    <img src="assets/images/icon.jpg" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="row row-content">
+            <div class="col-12 col-sm-12 col-md-8">
+                <div align="center">
+                    <h3>Overview</h3>
+                    <figure class="center">
+                        <iframe width="500" 
+                            height="400" 
+                            frameborder="0" 
+                            scrolling="no" 
+                            marginheight="0" 
+                            marginwidth="0"
+                            src="https://www.arcgis.com/apps/opsdashboard/index.html#/85320e2ea5424dfaaa75ae62e5c06e61">
+                        </iframe> 
+                        <br>
+                        <caption>
+                            Embedded from
+                            <cite>
+                                <a href="https://www.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6">
+                                    Johns Hopkins CSSE's COVID-19 visual dashboard.</a>
+                            </cite>
+                        </caption>
+                    </figure>    
+                </div>
+                <hr>
+                <div align="center">
+                    <h3>What is Coronavirus?</h3>
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://upload.wikimedia.org/wikipedia/commons/f/f4/COVID19_in_numbers-_R0%2C_the_case_fatality_rate_and_why_we_need_to_flatten_the_curve.webm" 
+                        type=video/webm allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col col-sm col-md">
+                <div align="center">
+                    <h3><a href="components/vis.html">Interactive Visualization</a></h3> 
+                    <p>An interactive Geographic Information System tracking the spread of the virus.</p>
+                    <hr>
+                    <h3><a href="components/forecast.html">Model Prediction</a></h3> 
+                    <p>A time series forecast model created based on particle filters.</p>
+                    <hr>
+                    <h3><a href="components/news.html">Journalistic Investigation</a></h3> 
+                    <p>Articles published by major news media providing insights on the pandemic.</p>
+                    <hr>
+                    <h3><a href="components/research.html">Scientific Research</a></h3> 
+                    <p>Our scientists are doing their best to tackle the virus.</p>
+                    <hr>
+                    <h3><a href="components/policy.html">Crisis-time Policy</a></h3> 
+                    <p>Has your government passed a new piece of legislation today for crisis relief?</p>
+                    <hr>
+                    <h3><a href="components/market.html">Market Changes</a></h3> 
+                    <p>Bail out the people not Wall Street!</p>
+                    <hr>
+                    <h3><a href="components/who_updates.html">WHO Updates</a></h3> 
+                    <p>Global status of the pandemic.</p>
+    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">             
+                <div class="col-4 offset-1 col-sm-2">
+                    <h5>Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="components/forecast.html">Forecast </a></li>
+                        <li><a href="components/vis.html">Visualization </a></li>
+                        <li><a href="components/news.html">News </a></li>
+                        <li><a href="components/research.html">Research </a></li>
+                        <li><a href="components/policy.html">Policy </a></li>
+                        <li><a href="components/market.html">Market </a></li>
+                        <li><a href="components/who_updates.html">WHO Updates </a></li>
+                        <li><a href="components/charts.html">Charts </a></li>
+                    </ul>
+                </div>
+                <div class="col col-sm">
+                    <div align="center">
+                        <h5>Who We Are</h5>
+                        <address>
+                          Blue Devils aiming to win HackDuke2020!
+                          <hr>
+                          <ul class="list-unstyled">
+                            <h6>Find Us At (Alphabetical Order)</h6>
+                            <li><a href="mailto:feng.yan@duke.edu">feng.yan@duke.edu</a></li>
+                            <li><a href="mailto:stuart.tsao@duke.edu">stuart.tsao@duke.edu</a></li>
+                            <li><a href="mailto:shiyou.wu@duke.edu">shiyou.wu@duke.edu</a></li>
+                            <li><a href="mailto:yingjie.xu@duke.edu">yingjie.xu@duke.edu</a></li>
+                            <li><a href="mailto:kaicheng.yu@duke.edu">kaicheng.yu@duke.edu</a></li>
+                          </ul>                      
+                       </address>    
+                    </div>
+                </div>
+           </div>
+           <div class="row justify-content-center">             
+                <div class="col-auto">
+                    <p>© Copyright 2020 HackDuke Team</p>
+                </div>
+           </div>
+        </div>
+    </footer>
+
+    
+    <script src="assets/js/lib/jquery.min.js"></script>
+    <script src="assets/js/lib/popper.min.js"></script>
+    <script src="assets/js/lib/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/js/scraper.js"></script>
+    <script type="text/javascript" src="assets/js/utils.js"></script>
+</body>
+</html>

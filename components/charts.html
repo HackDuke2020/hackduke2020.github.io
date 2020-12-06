@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <title>Charts</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <link rel="icon" type="image/jpg" href="../assets/images/icon.jpg" sizes="16x16">
+    <link rel="stylesheet" href="../assets/stylesheets/stylesheet.css">
+    <link rel="stylesheet" href="../assets/stylesheets/lib/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+    <link rel="stylesheet" href="../assets/stylesheets/lib/bootstrap-social.min.css">
+</head>
+<body onload=scrapeFullJHUData()>
+    <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target='#Navbar'>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="Navbar">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"><a class="nav-link" href="../index.html"><span class="fa fa-home fa-lg"></span> Home </a></li>
+                    <li class="nav-item"><a class="nav-link" href="../components/forecast.html"><span class="fa fa-info fa-lg"></span> Forecast </a></li>
+                    <li class="nav-item"><a class="nav-link" href="../components/vis.html"><span class="fa fa-chart-area fa-lg"></span> Visualization </a></li>
+                    <li class="nav-item"><a class="nav-link" href="../components/news.html"><span class="fa fa-newspaper fa-lg"></span> News </a></li>
+                    <li class="nav-item"><a class="nav-link" href="../components/research.html"><span class="fa fa-book fa-lg"></span> Research </a></li>
+                    <li class="nav-item"><a class="nav-link" href="../components/policy.html"><span class="fa fa-balance-scale fa-lg"></span> Policy </a></li>
+                    <li class="nav-item"><a class="nav-link" href="../components/market.html"><span class="fa fa-dollar-sign fa-lg"></span> Market </a></li>
+                    <li class="nav-item"><a class="nav-link" href="../components/who_updates.html"><span class="fa fa-hospital fa-lg"></span> WHO Updates </a></li>
+                    <li class="nav-item active"><a class="nav-link" href="#"><span class="fa fa-chart-bar fa-lg"></span> Charts </a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row row-content align-items-center">
+            <ol class="col-12 breadcrumb">
+                <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+                <li class="breadcrumb-item active">Charts</li>
+            </ol>
+            <div class="col-12" align="center">
+                <h3>Live Charts Based On JHU Data</h3>
+                <p>
+                    Statistics! Baby! Downloaded from JHU's official COVID-19 GitHub Repository.
+                </p>
+                <div id="csv-data"></div>    
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">             
+                <div class="col-4 offset-1 col-sm-2">
+                    <h5>Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../components/forecast.html">Forecast </a></li>
+                        <li><a href="../components/vis.html">Visualization </a></li>
+                        <li><a href="../components/news.html">News </a></li>
+                        <li><a href="../components/research.html">Research </a></li>
+                        <li><a href="../components/policy.html">Policy </a></li>
+                        <li><a href="../components/market.html">Market </a></li>
+                        <li><a href="../components/who_updates.html">WHO Updates </a></li>
+                        <li><a href="#">Charts </a></li>
+                    </ul>
+                </div>
+                <div class="col col-sm">
+                    <div align="center">
+                        <h5>Who We Are</h5>
+                        <address>
+                          Blue Devils aiming to win HackDuke2020!
+                          <hr>
+                          <ul class="list-unstyled">
+                            <h6>Find Us At (Alphabetical Order)</h6>
+                            <li><a href="mailto:feng.yan@duke.edu">feng.yan@duke.edu</a></li>
+                            <li><a href="mailto:stuart.tsao@duke.edu">stuart.tsao@duke.edu</a></li>
+                            <li><a href="mailto:shiyou.wu@duke.edu">shiyou.wu@duke.edu</a></li>
+                            <li><a href="mailto:yingjie.xu@duke.edu">yingjie.xu@duke.edu</a></li>
+                            <li><a href="mailto:kaicheng.yu@duke.edu">kaicheng.yu@duke.edu</a></li>
+                          </ul>                      
+                       </address>    
+                    </div>
+                </div>
+           </div>
+           <div class="row justify-content-center">             
+                <div class="col-auto">
+                    <p>© Copyright 2020 HackDuke Team</p>
+                </div>
+           </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/lib/jquery.min.js"></script>
+    <script src="../assets/js/lib/popper.min.js"></script>
+    <script src="../assets/js/lib/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../assets/js/scraper.js"></script>
+    <script type="text/javascript" src="../assets/js/utils.js"></script>
+
+</body>
+</html>
