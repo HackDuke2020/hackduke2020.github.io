@@ -55,7 +55,7 @@ async function getData() {
                 console.log(predVis);
 
                 var usDataVis = [];
-                usDataVis.push(["Date", "US Cases", "Our Prediction"]);
+                usDataVis.push(["Date", "US Daily Increase Cases", "Our Prediction"]);
                 for (let i=10; i<usData.length; i++) {
                     var date = new Date();  
                     date.setDate(date.getDate() - (usData.length-i-1));
@@ -83,7 +83,7 @@ async function getData() {
                   var data = google.visualization.arrayToDataTable(usDataVis);
             
                   var options = {
-                    title: 'US Cases, Last 20 Days, LSTM Model Trained w. Python',
+                    title: 'US Daily Increase Cases, Last 20 Weeks, LSTM Model Trained w. Python',
                     curveType: 'function',
                     legend: { position: 'bottom' }
                   };
@@ -100,7 +100,7 @@ async function getData() {
                 })
     
                 var forecastVis = [];
-                forecastVis.push(["Date", "Cases"]);
+                forecastVis.push(["Date", "Predicted Cases"]);
                 
                 let counter = -10;
                 for (let i=0; i<baseForecast.length; i++) {
@@ -143,7 +143,7 @@ async function getData() {
                     var data = google.visualization.arrayToDataTable(forecastVis);
               
                     var options = {
-                      title: 'US Cases Forecast of Next 100 Days Based on LSTM Model',
+                      title: 'US Daily Increase Cases Forecast of Next 100 Days Based on LSTM Model',
                       curveType: 'function',
                       legend: { position: 'bottom' }
                     };
