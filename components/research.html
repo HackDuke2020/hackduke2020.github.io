@@ -39,16 +39,111 @@
         <div class="row align-items-center">
             <ol class="col-12 breadcrumb">
                 <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
-                <li class="breadcrumb-item active">Research</li>
+                <li class="breadcrumb-item active">News Updates</li>
             </ol>
         </div>
+
+        <!--research -->
         <div class="row row-content align-items-center">
-            <ol class="col-12 col-sm-12 col-md-12">
-                <div id="rss-feeds"></div>
-            </ol>
+            <div class="col-12 col-sm-12 col-md-12">
+                <h2>Novel Coronavirus Research Reports from Top Research Centers</h2>
+                <p>Researches are crucial to our mutual hope to end this pandemic soon.</p>
+                <p>Follow the latest trend in research directions to stay tuned.</p>
+                
+                <div id="accordion">
+                    <div class="card">
+                        <div class="card-header" role="tab" id="advicehead">
+                            <h3 class="mb-0">
+                                <a data-toggle="collapse" data-target="#advice">
+                                <small>Center for Disease Control</small>
+                            </a>
+                            </h3>
+                        </div>
+                        <div class="collapse show" id="advice" data-parent="#accordion">
+                            <div class="card-body">
+                                <blockquote class="embedly-card">
+                                    <h4><a href="https://www.cdc.gov/mmwr/Novel_Coronavirus_Reports.html">December 4, 2020 (EARLY RELEASE)</a></h4>
+                                    <p>MMWR is launching the MMWR COVID-19 Weekly Briefing podcast, a brief weekly podcast series to highlight the latest scientific information from the COVID-19 response. </p>
+                                </blockquote>            
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" role="tab" id="guidancehead">
+                            <h3 class="mb-0">
+                                <a class="collapsed" data-toggle="collapse" data-target="#guidance">
+                                    <small>Nature</small>
+                            </a>
+                            </h3>
+                        </div>
+                        <div class="collapse" id="guidance" data-parent="#accordion">
+                            <div class="card-body">
+                                <blockquote class="embedly-card">
+                                    <h4><a href="https://www.nature.com/collections/hajgidghjb">Latest SARS-CoV-2/COVID-19 research</a></h4>
+                                    <p>To support urgent research to combat the ongoing outbreak of COVID-19, caused by the novel coronavirus SARS-CoV-2, the editorial teams at Nature Research have curated a collection of relevant articles.</p>
+                                </blockquote>            
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" role="tab" id="reportshead">
+                            <h3 class="mb-0">
+                                <a class="collapsed" data-toggle="collapse" data-target="#reports">
+                                <small>Science</small>
+                            </a>
+                            </h3>
+                        </div>
+                        <div class="collapse" id="reports" data-parent="#accordion">
+                            <div class="card-body">
+                                <blockquote class="embedly-card">
+                                    <h4><a href="https://www.sciencemag.org/collections/coronavirus">Coronavirus: Research, Commentary, and News</a></h4>
+                                    <p>The Science journals are striving to provide the best and most timely research, analysis, and news coverage of COVID-19 and the coronavirus that causes it. All content is free to access.</p>
+                                </blockquote>            
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" role="tab" id="researchhead">
+                            <h3 class="mb-0">
+                                <a class="collapsed" data-toggle="collapse" data-target="#research">
+                                <small>NEJM Group</small>
+                            </a>
+                            </h3>
+                        </div>
+                        <div class="collapse" id="research" data-parent="#accordion">
+                            <div class="card-body">
+                                <blockquote class="embedly-card">
+                                    <h4><a href="https://www.nejm.org/coronavirus">Repurposed Antiviral Drugs for Covid-19h</a></h4>
+                                    <p>Vaccine trials are heading into phases 2 and 3, and the FDA’s earlier-year reliance on emergency use authorizations (EUAs) under perceived political pressures to deliver pandemic solutions is raising concerns about the integrity of approval processes for vaccines potentially offered to millions of otherwise healthy people.</p>
+                                </blockquote>            
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" role="tab" id="researchhead">
+                            <h3 class="mb-0">
+                                <a class="collapsed" data-toggle="collapse" data-target="#research">
+                                <small>The Lancet</small>
+                            </a>
+                            </h3>
+                        </div>
+                        <div class="collapse" id="research" data-parent="#accordion">
+                            <div class="card-body">
+                                <blockquote class="embedly-card">
+                                    <h4><a href="https://www.thelancet.com/coronavirus">ARTICLES
+                                        Metformin and risk of mortality in patients hospitalised with COVID-19</a></h4>
+                                    <p>To assist health workers and researchers working under challenging conditions to bring this outbreak to a close, The Lancet has created a Coronavirus Resource Centre. This resource brings together new 2019 novel coronavirus disease (COVID-19) content from across The Lancet journals as it is published.</p>
+                                </blockquote>            
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
         </div>
     </div>
 
+    
 
 
     <footer class="footer">
@@ -104,6 +199,7 @@
                 $("#rss-feeds").rss("http://export.arxiv.org/rss/math.QA")
             });
       </script>
+    <script async src="https://cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
   
 </body>
 </html>
