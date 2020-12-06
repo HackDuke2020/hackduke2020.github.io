@@ -3,6 +3,7 @@ by *The CovHub Team*
 
 Welcome to our repository for our HackDuke2020 project! We’ve created a website that contains a broad range of information about the COVID-19, including latest updates, forecast for daily new cases, interactive visualization, and more. Check it out at https://hackduke2020.github.io/
 
+Frameworks: tensorflow.js, Bootstrap, JQuery, stocks.js, Google Chart, Embed.ly, https://github.com/LucaDiba/epidemic-simulator
 
 ## About the Project
 
@@ -32,7 +33,7 @@ Our website is divided into eight main sections, each of which presents a centra
 
 We have achieved all the features we initially planned, which are described in the section above. 
 
-One challenge we ran into was that, while building the covid case forecasting model, we could not achieve accurate prediction. Even after we spent many hours tuning an LSTM neural network that predicts the cumulative number of cases, its performance was always unsatisfactory during November and December 2020, possibly due to the huge surge in the data during that time. We then reevaluated the covid case data and decided to switch to training an LSTM neural network model that predicts daily case increase instead, which has less variance. It turned out to be a right decision, and we were able to achieve much better accuracy of prediction. 
+One challenge we ran into was that, while building the covid case forecasting model, we could not achieve accurate prediction. Even after we spent many hours tuning an LSTM neural network that predicts the cumulative number of cases, its performance was always unsatisfactory during November and December 2020, possibly due to the huge surge in the data during that time. We then reevaluated the covid case data and decided to switch to training an tfjs LSTM neural network model (converted from a pre-trained python model) that predicts daily case increase instead, which has less variance. It turned out to be a right decision, and we were able to achieve much better accuracy of prediction. 
 
 ### What’s Next
 While our website has already incorporated a broad range of informative features, we believe some features can be further improved. For instance, in the simulation visualization, we could add parameters such as the number of centralized locations within the community (e.g. malls) and the community’s county, which would also impact how the virus spread. In the covid case forecast page, we plan to adopt state-of-the-art models from recent researches to yield more accurate results, thus presenting a more reliable forecast to our users. Meanwhile, we would be collecting feedback from users and accordingly polish the existing features on our website. 
