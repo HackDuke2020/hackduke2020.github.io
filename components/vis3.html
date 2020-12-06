@@ -79,18 +79,12 @@
 
 
 <div class="row">
-  <h1 data-translate="title">Improved Effectivness of Active Quarantine and Introduction of Hospitalization Factor</h1>
+  <h1 data-translate="title">Improved Effectiveness of Active Quarantine and Introduction of Hospitalization</h1>
 </div>
 <div class="row">
   <div class="col-lg-8 col-sm-12 align-itens-left">
     <p class="text-justify">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </p>
-    <p class="text-justify">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </p>
-    <p class="text-justify">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      In the last simulation, we attempt to introduce two more factors: active quarantine and hospitalization. In the simulation, quarantine means that these infected individuals can no longer infect other susceptibles. More specifically, we assume no active testing, so people who are asymptomatic or in the latency period (not showing any symptoms) do not get quarantined. For hospitalization, we included the intensive care unit and the number of beds available for every 100 individuals. Thus, the intensive care rate indicates what percentage of the infected population needs intensive care to avoid dying. 
     </p>
   </div>
 </div>
@@ -142,7 +136,7 @@
 
 <!-- start of parameters -->
 <div class="row">
-  <h3><span data-translate="simulation_parameters">Simulation parameters including Quarantine and Hospitalization</span></h3>
+  <h3><span data-translate="simulation_parameters">Simulation with Active Quarantine and Hospitalization</span></h3>
 </div>
 
 <div class="row mb-5">
@@ -152,23 +146,23 @@
         <label for="control_initial_population" data-translate="simulation_initial_population">Initial population</label>
         <input type="number" id="control_initial_population" class="form-control" aria-describedby="control_initial_population_help">
         <small id="control_initial_population_help" class="form-text text-muted" data-translate="simulation_initial_population_help">
-          Number of total people
+          Total number of individuals before the start of the simulation
         </small>
       </div>
       <div class="col-sm-4">
         <label for="control_initial_infected" data-translate="simulation_initial_infected">Initial infected</label>
         <input type="number" id="control_initial_infected" class="form-control" aria-describedby="control_initial_infected_help">
         <small id="control_initial_infected_help" class="form-text text-muted" data-translate="simulation_initial_infected_help">
-          Number of initial people infected
+          Total number of infected individuals before the start of the simulation
         </small>
       </div>
 
       <div class="col-sm-4">
-        <label for="control_people_speed" data-translate="simulation_people_speed">People speed</label>
+        <label for="control_people_speed" data-translate="simulation_people_speed">Movement rate</label>
         <input type="range" id="control_people_speed" class="form-control-range" aria-describedby="control_people_speed_help">
         <small id="control_people_speed_help" class="form-text text-muted" data-translate="simulation_people_speed_help">
-          Speed with which people move.<br>
-          Decrease it to simulate lockdown
+          How fast individuals move<br>
+          Decrease to simulate reduced in-person activity levels
         </small>
       </div>
     </div>
@@ -178,7 +172,7 @@
         <label for="control_desease_duration" data-translate="simulation_desease_duration">Disease duration</label>
         <input type="number" id="control_desease_duration" class="form-control" aria-describedby="control_desease_duration_help">
         <small id="control_desease_duration_help" class="form-text text-muted" data-translate="simulation_desease_duration_help">
-          How many days before dying or healing
+          Length of time period for which infected indivduals are infectious
         </small>
       </div>
 
@@ -187,7 +181,7 @@
         <label for="control_infection_rate"><span data-translate="simulation_infection_rate">Infection rate</span>: <span id="control_infection_rate_text"></span>%</label>
         <input type="range" id="control_infection_rate" class="form-control-range" aria-describedby="control_infection_rate_help">
         <small id="control_infection_rate_help" class="form-text text-muted" data-translate="simulation_infection_rate_help">
-          The probability for an infected to infect another person in the nearby
+          Probability of successful transmission given a contact between an infected individual and a nearby susceptible individual
         </small>
       </div>
 
@@ -196,7 +190,7 @@
         <label for="control_lethality_rate"><span data-translate="simulation_lethality">Lethality</span>: <span id="control_lethality_rate_text"></span>%</label>
         <input type="range" id="control_lethality_rate" class="form-control-range" aria-describedby="control_lethality_rate_help">
         <small id="control_lethality_rate_help" class="form-text text-muted" data-translate="simulation_lethality_help">
-          The probability for an infected to die
+          Probability of an infected individual dying
         </small>
       </div>
 
@@ -212,17 +206,17 @@
         </div>
       </div>
       <div class="col-sm-4">
-        <label for="control_desease_duration" data-translate="simulation_days_before_quarantine">Days before quarantine</label>
+        <label for="control_desease_duration" data-translate="simulation_days_before_quarantine">Latency period</label>
         <input type="number" id="control_days_to_quarantine" class="form-control" aria-describedby="control_desease_duration_help">
         <small id="control_desease_duration_help" class="form-text text-muted" data-translate="simulation_days_before_quarantine_help">
-          How many days before showing symphtoms and going in quarantine
+          Length of time period before the infected individuals begin to display symptoms and get quarantined
         </small>
       </div>
       <div class="col-sm-4">
         <label for="control_asymptomatic_rate"><span data-translate="simulation_asymptomatic_rate">Asymptomatic rate</span>: <span id="control_asymptomatic_rate_text"></span>%</label>
         <input type="range" id="control_asymptomatic_rate" class="form-control-range" aria-describedby="control_asymptomatic_rate_help">
         <small id="control_asymptomatic_rate_help" class="form-text text-muted" data-translate="simulation_asymptomatic_rate_help">
-          How many, among people who get the virus, don't go in quarantine (maybe for not showing symphtoms)
+          Percentage of infected individuals that are asymptomatic and thus do not get quarantined
         </small>
       </div>
     </div>
@@ -232,14 +226,14 @@
         <label for="control_intensive_care_rate"><span data-translate="simulation_icu_rate">Intensive care rate</span>: <span id="control_intensive_care_rate_text"></span>%</label>
         <input type="range" id="control_intensive_care_rate" class="form-control-range" aria-describedby="control_intensive_care_rate_help">
         <small id="control_intensive_care_rate_help" class="form-text text-muted" data-translate="simulation_icu_rate_help">
-          How many, among people who get the virus, need intensive care to not die
+          Percentage of infected individuals that require intensive care to stay alive
         </small>
       </div>
       <div class="col-sm-4">
-        <label for="control_intensive_care_beds" data-translate="simulation_icu_every_100">Number of IC beds every 100 people</label>
+        <label for="control_intensive_care_beds" data-translate="simulation_icu_every_100">Number of IC beds per every 100 infected individuals</label>
         <input type="number" id="control_intensive_care_beds" class="form-control" aria-describedby="control_intensive_care_beds_help">
         <small id="control_intensive_care_beds_help" class="form-text text-muted" data-translate="simulation_icu_every_100_help">
-          E.g.: if there are 2 beds for 200 people, put "1" (1 bed every 100 people).<br>If there are no beds available, people who need IC will die
+          i.e., if there are not enough beds for people that require intensive care, they will die
         </small>
       </div>
     </div>
@@ -266,14 +260,7 @@
 <div class="row">
   <div class="col-lg-8 col-sm-12 align-itens-left">
     <p class="text-justify">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </p>
-    <p class="text-justify">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </p>
-    <p class="text-justify">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </p>
+    </p>In conclusion, following the previous simulations, it is evident that when we introduced the simulated preventive measures, both the final size of the epidemic (number of individuals that have been infected) and the total number of deaths are decreased. Both visually and intuitively, we can observe that these widely adopted measures are indeed effective at mitigating the impact of an epidemic, or a pandemic for that matter. 
   </div>
 </div>
 
