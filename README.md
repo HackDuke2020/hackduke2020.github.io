@@ -1,7 +1,7 @@
 # hackduke2020.github.io 
 by *The CovHub Team*
 
-Welcome to our repository for our HackDuke2020 project! We’ve created a website that contains a broad range of information about the COVID-19, including the latest updates, the forecast for daily new cases, interactive visualization, and more. Check it out at https://hackduke2020.github.io/
+Welcome to our repository for our HackDuke2020 project! We’ve created a responsive website that contains a broad range of information about the COVID-19, including the latest updates, the forecast for daily new cases, interactive visualization, and more. Check it out at https://hackduke2020.github.io/
 
 Frameworks: tensorflow.js, Bootstrap, JQuery, stocks.js, Google Chart, Embed.ly, https://github.com/LucaDiba/epidemic-simulator
 
