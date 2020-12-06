@@ -80,6 +80,13 @@
               <h1 data-translate="title">Epidemic simulator</h1>
             </div>
             <div class="row">
+              <div class="col-lg-8 col-sm-12 align-itens-left">
+                <p>
+                  "This is an interactive simulation tool for the infection process. You can set the parameters below as you like and click <start simulation>, or click <stop simulation> to stop and reset the simulation. Time to explore!"
+                </p>
+              </div>
+            </div>
+            <div class="row">
               <div class="alert alert-danger col-sm-3" role="alert">
                 <span id="total_infected"></span> <span data-translate="infected">infected</span><br>
               </div>
@@ -116,6 +123,13 @@
                 <div id="stage_dead_container" class="border rounded border-dark" style="min-height: 100px;"></div>
               </div>
             </div>
+            <div class="row">
+              <div class="col-lg-8 col-sm-12 align-itens-left">
+                <p>
+                  "It is only a simulator, but we believe the lessons from simulation are the same and applicable to the real world setting. Please always abide by safety measures during the pandemic, to create a safer environment for everyone. "
+                </p>
+              </div>
+            </div>
           </div>
           <div class="row">
             <h3><span data-translate="simulation_parameters">Simulation parameters</span></h3>
@@ -148,7 +162,7 @@
               </div>
               <div class="form-group row">
                 <div class="col-sm-4">
-                  <label for="control_desease_duration" data-translate="simulation_desease_duration">Desease duration</label>
+                  <label for="control_desease_duration" data-translate="simulation_desease_duration">Disease duration</label>
                   <input type="number" id="control_desease_duration" class="form-control" aria-describedby="control_desease_duration_help">
                   <small id="control_desease_duration_help" class="form-text text-muted" data-translate="simulation_desease_duration_help">
                     How many days before dying or healing
