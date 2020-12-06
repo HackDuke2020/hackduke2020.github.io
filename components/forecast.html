@@ -41,9 +41,14 @@
                 <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
                 <li class="breadcrumb-item active">Forecast</li>
             </ol>
+            
         </div>
         <div class="row row-content align-items-center">
             <h2 class="col-12">US COVID Cases Daily Increase</h2>
+            <div class="col-12">
+                <br>
+                <p>The following are the prediction results from our recurrent neural network model. Specially, the model contains two LSTM layers and three dense layers and is trained over JHU’s COVID case data since January 2020. In the training, it was found that the optimal “window size” (the number of days used to predict the following day in time series prediction) is 10. This could be interpreted as that the daily case increase is most related to the increases in the preceding 10 days, which is unsurprising because of the high rate of spread.</p>
+            </div>
             <div class="col loading">
                 <div class="d-flex flex-row">
                     <div class="p-2">Loading Graph....</div>
@@ -56,7 +61,7 @@
             </div>
 
             <div class="col-12" id="curve_chart_us_cases" style="width: 1000px; height: 500px"></div>
-            <p>The following are the prediction results from our recurrent neural network model. Specially, the model contains two LSTM layers and three dense layers and is trained over JHU’s COVID case data since January 2020. In the training, it was found that the optimal “window size” (the number of days used to predict the following day in time series prediction) is 10. This could be interpreted as that the daily case increase is most related to the increases in the preceding 10 days, which is unsurprising because of the high rate of spread.</p>
+            
         </div>
         <div class="row row-content align-items-center">
             <h2 class="col-12">US COVID Cases Daily Increase: Forecast</h2>
