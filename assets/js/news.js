@@ -1,5 +1,4 @@
-<script>
-  let init = 321000;
+let init = 321000;
 
   setInterval(() => {
     let a = Math.round(Math.random() * 5);
@@ -21,4 +20,3 @@
     </blockquote>
   `
   }
-</script>
