@@ -61,7 +61,7 @@ async function getData() {
                     date.setDate(date.getDate() - (usData.length-i-1));
                     var dateString = ((date.getMonth() > 8) ? (date.getMonth() + 1) : ('0' + (date.getMonth() + 1))) + '-' + ((date.getDate() > 9) ? date.getDate() : ('0' + date.getDate())) + '-' + date.getFullYear();
     
-                    usDataVis.push([dateString, usData[i]*10e6, predVis[i]-35000]);
+                    usDataVis.push([dateString, usData[i]*10e6, predVis[i]-35000]); // correction
                 }
                 console.log(usDataVis);
 
@@ -75,13 +75,15 @@ async function getData() {
                 
                 google.charts.load('current', {'packages':['corechart']});
                 google.charts.setOnLoadCallback(drawChart);
+                google.charts.setOnLoadCallback(drawForecastChart);
+
             
             
                 function drawChart() {
                   var data = google.visualization.arrayToDataTable(usDataVis);
             
                   var options = {
-                    title: 'US Cases, Last 20 Days, LSTM model trained w. Python',
+                    title: 'US Cases, Last 20 Days, LSTM Model Trained w. Python',
                     curveType: 'function',
                     legend: { position: 'bottom' }
                   };
@@ -90,6 +92,68 @@ async function getData() {
             
                   chart.draw(data, options);
                 }
+
+
+                var baseForecast = predVis.slice(predVis.length-11);
+                baseForecast = baseForecast.map(function(x) {
+                    return (x)/10e6;
+                })
+    
+                var forecastVis = [];
+                forecastVis.push(["Date", "Cases"]);
+                
+                let counter = -10;
+                for (let i=0; i<baseForecast.length; i++) {
+                    var date = new Date();  
+                    date.setDate(date.getDate() + counter);
+                    var dateString = ((date.getMonth() > 8) ? (date.getMonth() + 1) : ('0' + (date.getMonth() + 1))) + '-' + ((date.getDate() > 9) ? date.getDate() : ('0' + date.getDate())) + '-' + date.getFullYear();
+
+                    forecastVis.push([dateString, baseForecast[i]*10e6]);
+                    counter += 1;
+                }
+
+                while (counter < 100) {
+                    const x = tf.tensor([baseForecast.slice(baseForecast.length-10)]);
+                    console.log("x data");
+                    x.print();
+                    const axis = 2;
+                    // x.expandDims(axis).print();
+    
+                    // x.reshape([predArr.length, 10, 1]);
+                    // x.print();
+    
+                    // const x = tf.randomUniform([1, 10, 1]);
+                    const pred = model.predict([x.expandDims(axis)]);
+                    pred.print();
+                    const values = pred.dataSync();
+
+                    baseForecast.push(values[0]);
+                    var date = new Date();  
+                    date.setDate(date.getDate() + counter);
+                    var dateString = ((date.getMonth() > 8) ? (date.getMonth() + 1) : ('0' + (date.getMonth() + 1))) + '-' + ((date.getDate() > 9) ? date.getDate() : ('0' + date.getDate())) + '-' + date.getFullYear();
+
+                    forecastVis.push([dateString, values[0]*10e6]);
+    
+                    counter += 1;
+                }
+                console.log("baseforecast");
+                console.log(baseForecast);
+
+                function drawForecastChart() {
+                    var data = google.visualization.arrayToDataTable(forecastVis);
+              
+                    var options = {
+                      title: 'US Cases Forecast of Next 100 Days Based on LSTM Model',
+                      curveType: 'function',
+                      legend: { position: 'bottom' }
+                    };
+
+
+                    var chart = new google.visualization.LineChart(document.getElementById('curve_chart_forecast'));
+              
+                    chart.draw(data, options);
+                  }
+  
     
 
 
