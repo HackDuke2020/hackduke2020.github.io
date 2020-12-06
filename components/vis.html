@@ -88,10 +88,7 @@
                 There has been a lot of recent exciting work done in epidemic simulation and modeling, but that’s not the focus of this page. Instead, through a very simple and ideal model, we attempt to convey the fundamental ideas and intuition for why, and how, the widely adopted preventive measures are effective at containing the spread of the virus. 
               </p>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                The following simulation is in the simplest form without any preventive methods. Namely, we have the initial population, the initial number of infected individuals, the rate of infection, and the lethality. 
               </p>
             </div>
           </div>
@@ -144,7 +141,7 @@
 
 <!-- start of parameters -->
           <div class="row">
-            <h3><span data-translate="simulation_parameters">Simulation parameters No Prevention Methods</span></h3>
+            <h3><span data-translate="simulation_parameters">Simulation with No Preventive Methods</span></h3>
           </div>
 
           <div class="row mb-5">
@@ -154,14 +151,14 @@
                   <label for="control_initial_population" data-translate="simulation_initial_population">Initial population</label>
                   <input type="number" id="control_initial_population" class="form-control" aria-describedby="control_initial_population_help">
                   <small id="control_initial_population_help" class="form-text text-muted" data-translate="simulation_initial_population_help">
-                    Number of total people
+                    Total number of individuals before the start of the simulation
                   </small>
                 </div>
                 <div class="col-sm-4">
                   <label for="control_initial_infected" data-translate="simulation_initial_infected">Initial infected</label>
                   <input type="number" id="control_initial_infected" class="form-control" aria-describedby="control_initial_infected_help">
                   <small id="control_initial_infected_help" class="form-text text-muted" data-translate="simulation_initial_infected_help">
-                    Number of initial people infected
+                    Total number of infected individuals before the start of the simulation
                   </small>
                 </div>
 
@@ -189,7 +186,7 @@
                   <label for="control_infection_rate"><span data-translate="simulation_infection_rate">Infection rate</span>: <span id="control_infection_rate_text"></span>%</label>
                   <input type="range" id="control_infection_rate" class="form-control-range" aria-describedby="control_infection_rate_help">
                   <small id="control_infection_rate_help" class="form-text text-muted" data-translate="simulation_infection_rate_help">
-                    The probability for an infected to infect another person in the nearby
+                    Probability of successful transmission given a contact between an infected individual and a nearby individual
                   </small>
                 </div>
 
@@ -198,7 +195,7 @@
                   <label for="control_lethality_rate"><span data-translate="simulation_lethality">Lethality</span>: <span id="control_lethality_rate_text"></span>%</label>
                   <input type="range" id="control_lethality_rate" class="form-control-range" aria-describedby="control_lethality_rate_help">
                   <small id="control_lethality_rate_help" class="form-text text-muted" data-translate="simulation_lethality_help">
-                    The probability for an infected to die
+                    Probability of an infected individual dying
                   </small>
                 </div>
 
