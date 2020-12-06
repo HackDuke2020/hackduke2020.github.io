@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="../assets/stylesheets/lib/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
     <link rel="stylesheet" href="../assets/stylesheets/lib/bootstrap-social.min.css">
+
 </head>
 <body>
     <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
@@ -44,52 +45,33 @@
         </div>
          <!--news -->
          <div class="row">
-             <div class="col-12 align-items-center">
-                <h2>Latest College Policies on Covid Controlling</h2>
-                <br>
-                <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-             </div>
+            <h2>Latest College Policies on Covid Controlling</h2>
             <!--latest news-->
-            <div class="col-12 align-items-center">
-                <p class="text-justify">Colleges across the states are taking active control over the spread of the pandemic.</p>
-                <p class="text-justify">Click on the ones you are most concerned about and see related policies!</p>
-                <button type="button" class="btn btn-primary" id="control_start" data-translate='start_simulation'>Spring 2021</button>
-                <button type="button" class="btn btn-primary" id="control_start" data-translate='start_simulation'>Remote Learning</button>
-                <button type="button" class="btn btn-primary" id="control_start" data-translate='start_simulation'>Club & Social Life</button>
-                <button type="button" class="btn btn-primary" id="control_start" data-translate='start_simulation'>Masks</button>
-                <input class='search' type='text' placeholder='College Name' aria-label='Search'>
-                <button class='btn btn-outline-primary searchTest'>Search</button>
-            </div>
-        </div>
-        
-        <div class="row row-content">
-            <div class="col-12 align-items-center">
-                <div class="card">
-                    <div class="card-header" role="tab" id="advicehead">
-                        <h3 class="mb-0">
-                        College Policies
-                        </a>
-                        </h3>
+            <div class="col-12 align-itens-center">
+                <p>Colleges across the states are taking active control over the spread of the pandemic.</p>
+                <p>Click on the ones you are most concerned about and see related policies!</p>
+                <div align="center">
+                    <button type="button" class="btn btn-primary searchS" onclick="myFunction_S()" style="margin:20px 5px;">Spring 2021</button>
+                    <button type="button" class="btn btn-primary searchR" onclick="myFunction_R()" style="margin:20px 5px;">Remote Learning</button>
+                    <button type="button" class="btn btn-primary searchC" onclick="myFunction_C()" style="margin:20px 5px;">Club & Social Life</button>
+                    <button type="button" class="btn btn-primary searchSt" onclick="myFunction_St()" style="margin:20px 5px;">Stories</button>
+                    <button type="button" class="btn btn-primary searchM" onclick="myFunction_M()" style="margin:20px 5px;">Masks</button>
+                    
+                    <input class='search' type='text' placeholder='College Name' aria-label='Search'>
+                    <button type="button" class='btn btn-outline-primary searchTest'>Search</button>
+                    <div class="test">
+                    <blockquote class="embedly-card">
+                        <h4><a href="https://news.google.com/rss/search?q={Duke Policy}">College Policies</a></h4>
+                        <p>Remember to put your mask on!</p>
+                    </blockquote>
                     </div>
-                        <div class="card-body">
-                            <div class="test">
-
-                            <blockquote class="embedly-card">
-                                <h4><a href="https://news.google.com/rss/search?q={Duke Covid Policies}">College Policies</a></h4>
-                                <p class="text-justify">Remember to put your mask on!</p>
-                            </blockquote>    
-                            </div>
-                        </div>
                 </div>
             </div>
-
         </div>
     </div>
 
-
     <footer class="footer">
-        <div class="container">
+        <div class="container">c
             <div class="row">             
                 <div class="col-4 offset-1 col-sm-2">
                     <h5>Links</h5>
@@ -113,10 +95,10 @@
                           <hr>
                           <ul class="list-unstyled">
                             <h6>Find Us At (Alphabetical Order)</h6>
+                            <li><a href="mailto:feng.yan@duke.edu">feng.yan@duke.edu</a></li>
                             <li><a href="mailto:stuart.tsao@duke.edu">stuart.tsao@duke.edu</a></li>
                             <li><a href="mailto:shiyou.wu@duke.edu">shiyou.wu@duke.edu</a></li>
                             <li><a href="mailto:yingjie.xu@duke.edu">yingjie.xu@duke.edu</a></li>
-                            <li><a href="mailto:feng.yan@duke.edu">feng.yan@duke.edu</a></li>
                             <li><a href="mailto:kaicheng.yu@duke.edu">kaicheng.yu@duke.edu</a></li>
                           </ul>                      
                        </address>    
@@ -125,7 +107,7 @@
            </div>
            <div class="row justify-content-center">             
                 <div class="col-auto">
-                    <p class="text-justify">© Copyright 2020 CovHub Team</p>
+                    <p>© Copyright 2020 HackDuke Team</p>
                 </div>
            </div>
         </div>
@@ -137,5 +119,70 @@
     <script type="text/javascript" src="../assets/js/scraper.js"></script>
     <script type="text/javascript" src="../assets/js/utils.js"></script>
     <script async src="https://cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
+    <script>
+        document.querySelector('.searchS').addEventListener('click', myFunction_S);
+        function myFunction_S(){
+            document.querySelector('.test').removeChild(document.querySelector('.test').children[0]);
+            document.querySelector('.test').innerHTML= `           
+            <blockquote class="embedly-card">
+            <h4><a href="https://news.google.com/rss/search?q={Duke Spring}">College Policies Loading </a></h4>
+            <p>Remember to put your mask on!</p >
+            </blockquote>
+            `
+        }
+        document.querySelector('.searchR').addEventListener('click', myFunction_R);
+        function myFunction_R(){
+            document.querySelector('.test').removeChild(document.querySelector('.test').children[0]);
+            document.querySelector('.test').innerHTML= `           
+            <blockquote class="embedly-card">
+            <h4><a href="https://news.google.com/rss/search?q={Duke Remote}">College Policies Loading </a></h4>
+            <p>Remember to put your mask on!</p >
+            </blockquote>
+            `
+        }
+        document.querySelector('.searchSt').addEventListener('click', myFunction_St);
+        function myFunction_St(){
+            document.querySelector('.test').removeChild(document.querySelector('.test').children[0]);
+            document.querySelector('.test').innerHTML= `           
+            <blockquote class="embedly-card">
+            <h4><a href="https://news.google.com/rss/search?q={Covid Story}">College Policies Loading </a></h4>
+            <p>Remember to put your mask on!</p >
+            </blockquote>
+            `
+        }
+        document.querySelector('.searchC').addEventListener('click', myFunction_C);
+        function myFunction_C(){
+            document.querySelector('.test').removeChild(document.querySelector('.test').children[0]);
+            document.querySelector('.test').innerHTML= `           
+            <blockquote class="embedly-card">
+            <h4><a href="https://news.google.com/rss/search?q={Duke Clubs}">College Policies Loading </a></h4>
+            <p>Remember to put your mask on!</p >
+            </blockquote>
+            `
+        }
+        document.querySelector('.searchB').addEventListener('click', myFunction_M);
+        function myFunction_M(){
+            document.querySelector('.test').removeChild(document.querySelector('.test').children[0]);
+            document.querySelector('.test').innerHTML= `           
+            <blockquote class="embedly-card">
+            <h4><a href="https://news.google.com/rss/search?q={Duke Masks}">College Policies Loading</a></h4>
+            <p>Remember to put your mask on!</p >
+            </blockquote>
+            `
+        }
+        
+        document.querySelector('.searchTest').addEventListener('click', search);
+        function search(e) {
+            e.preventDefault();
+            document.querySelector('.test').removeChild(document.querySelector('.test').children[0]);
+            const searchValue = document.querySelector('.search').value;
+            document.querySelector('.test').innerHTML = `
+            <blockquote class="embedly-card">
+            <h4><a href="https://news.google.com/rss/search?q=${searchValue}">College Policies Loading</a></h4>
+            <p>Remember to put your mask on!</p >
+            </blockquote>
+            `
+        }
+    </script>
 </body>
 </html>
