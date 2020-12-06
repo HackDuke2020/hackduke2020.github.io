@@ -1,2 +1,4 @@
 .DS_Store
 assets/.DS_Store
+node_modules
+assets/Models/model.h5
