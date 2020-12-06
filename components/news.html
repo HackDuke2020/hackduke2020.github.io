@@ -81,7 +81,7 @@
   <div class="row">
     <!--latest news-->
     <div class="col-lg-8 col-sm-12 align-itens-left">
-      <p class="text-justify">Tens of thousands of new coronavirus cases continue to emerge on college campuses.</p>
+      <p class="text-justify" margin="5px;">Tens of thousands of new coronavirus cases continue to emerge on college campuses. Most of the cases have been announced since students returned to campus for the fall term. More than 65 colleges have reported at least 1,000 cases over the course of the pandemic, and more than 540 colleges have reported at least 100 cases. The constantly increasing figure above is the number of college students infected simulated using the data collected by The New York Times. Due to many unavoidable social activities, universities are still high-risk areas for the pandemic. You can see the latest university epidemic news from this webpage to stay alert. At the same time, you may also type in your school name in the search bar on the right to see the epidemic situation of your school specifically.</p>
       <p class="text-justify">Check out the latest college pandemic news👇</p>
       <blockquote class="embedly-card">
         <h4><a href="https://news.google.com/rss/search?q={college covid}">College News</a></h4>
@@ -93,7 +93,7 @@
       <form class='form-inline mt-8 mt-md-0'>
         <p class="text-justify">Check out what's happening in your school? 🤔</p>
         <input class='search' type='text' placeholder='College Name' aria-label='Search'>
-        <button class='btn btn-outline-primary searchTest'>Search</button>
+        <button class='btn btn-outline-primary searchTest' margin="10px;">Search</button>
         <div class="test">
           <blockquote class="embedly-card">
             <h4><a href="https://news.google.com/rss/search?q={Duke Covid}">College News</a></h4>
@@ -174,7 +174,7 @@
     const searchValue = document.querySelector('.search').value;
     document.querySelector('.test').innerHTML = `
     <blockquote class="embedly-card">
-      <h4><a href="https://news.google.com/rss/search?q=${searchValue}">College News </a></h4>
+      <h4><a href="https://news.google.com/rss/search?q=${searchValue}">College News Loading</a></h4>
       <p class="text-justify">Latest College Epidemic News</p >
     </blockquote>
   `

@@ -48,7 +48,8 @@
             <h2>Latest College Policies on Covid Controlling</h2>
             <!--latest news-->
             <div class="col-12 align-itens-center">
-                <p>Colleges across the states are taking active control over the spread of the pandemic.</p>
+                <p padding="100px;">In the event of an influenza pandemic, colleges and universities will play an integral role in protecting the health and safety of students, employees and their families. 
+                    Colleges across the states are taking active control over the spread of the pandemic. Policies change all the time and it is important that you as a college student know what to do next. You may check out the latest policies and other related topics by typing in your school name and clicking on the topic buttons.</p>
                 <p>Click on the ones you are most concerned about and see related policies!</p>
                 <div align="center">
                     <button type="button" class="btn btn-primary searchS" onclick="myFunction_S()" style="margin:20px 5px;">Spring 2021</button>
@@ -58,7 +59,7 @@
                     <button type="button" class="btn btn-primary searchM" onclick="myFunction_M()" style="margin:20px 5px;">Masks</button>
                     
                     <input class='search' type='text' placeholder='College Name' aria-label='Search'>
-                    <button type="button" class='btn btn-outline-primary searchTest'>Search</button>
+                    <button type='button' class='btn btn-outline-primary searchT' onclick="search()">Search</button>
                     <div class="test">
                     <blockquote class="embedly-card">
                         <h4><a href="https://news.google.com/rss/search?q={Duke Policy}">College Policies</a></h4>
@@ -171,14 +172,13 @@
             `
         }
         
-        document.querySelector('.searchTest').addEventListener('click', search);
-        function search(e) {
-            e.preventDefault();
+        document.querySelector('.searchT').addEventListener('click', search);
+        function search() {
             document.querySelector('.test').removeChild(document.querySelector('.test').children[0]);
             const searchValue = document.querySelector('.search').value;
             document.querySelector('.test').innerHTML = `
             <blockquote class="embedly-card">
-            <h4><a href="https://news.google.com/rss/search?q=${searchValue}">College Policies Loading</a></h4>
+                <h4><a href="https://news.google.com/rss/search?q=${searchValue}">College Policies Loading</a></h4>
             <p>Remember to put your mask on!</p >
             </blockquote>
             `
