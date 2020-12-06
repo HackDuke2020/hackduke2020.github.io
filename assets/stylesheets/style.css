@@ -1,0 +1,89 @@
+@charset "UTF-8";
+/***********************
+ B A S E   S T Y L E S 
+************************/
+/*********************
+ V I   I M P O R T S
+**********************/
+/************
+ C O L O R S
+*************/
+.topnumber {
+  font-weight: 700;
+  color: #012169;
+  font-size: 3.2rem;
+}
+@media (max-width: 600px) {
+  .topnumber {
+    font-size: 2.2rem;
+  }
+}
+
+.g-topline {
+  max-width: 1050px;
+  font-family: "nyt-franklin", arial, helvetica, sans-serif;
+  font-weight: 300;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+@media (max-width: 600px) {
+  .g-topline {
+    font-size: 1rem;
+  }
+}
+.g-topline .g-body {
+  display: none;
+}
+
+#casestop {
+  width: 220px;
+}
+@media (max-width: 765px) {
+  #casestop {
+    width: 160px;
+  }
+}
+
+.g-topline {
+  max-width: 440px;
+  width: 100%;
+}
+
+#schoolstop {
+  width: 220px;
+}
+@media (max-width: 765px) {
+  #schoolstop {
+    width: 160px;
+  }
+}
+
+#dividertop {
+  width: 3px;
+}
+#dividertop div {
+  width: 1px;
+  height: 100%;
+  transform: translate(15px, 0);
+  background-color: black;
+  display: block;
+  margin: 0 auto;
+}
+@media (max-width: 765px) {
+  #dividertop div {
+    transform: translate(10px, 0);
+  }
+}
+
+#row {
+  padding: 10;
+}
+
+.search {
+}
