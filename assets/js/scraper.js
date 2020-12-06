@@ -8,7 +8,7 @@ function scrapeJHUData() {
         }
       };
     var date = new Date();  
-    date.setDate(date.getDate() - 100);
+    date.setDate(date.getDate() - 2);
     var dateString = ((date.getMonth() > 8) ? (date.getMonth() + 1) : ('0' + (date.getMonth() + 1))) + '-' + ((date.getDate() > 9) ? date.getDate() : ('0' + date.getDate())) + '-' + date.getFullYear();
     console.log(dateString);
     oReq.open("GET", `https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/${dateString}.csv`, "true");
@@ -24,7 +24,12 @@ function scrapeFullJHUData() {
             document.getElementById("csv-data").innerHTML = table;
         }
       };
-    oReq.open("GET", "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/03-24-2020.csv", "true");
+      var date = new Date();  
+      date.setDate(date.getDate() - 2);
+      var dateString = ((date.getMonth() > 8) ? (date.getMonth() + 1) : ('0' + (date.getMonth() + 1))) + '-' + ((date.getDate() > 9) ? date.getDate() : ('0' + date.getDate())) + '-' + date.getFullYear();
+      console.log(dateString);
+  
+    oReq.open("GET", `https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/${dateString}.csv`, "true");
     oReq.send(null);
 }
 

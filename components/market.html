@@ -39,73 +39,17 @@
                 <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
                 <li class="breadcrumb-item active">Market</li>
             </ol>
-            <div class="col-12">
-               <h2>Market Updates</h2>
-            </div>
+            <h2>Stock Price</h2>
+            <div id="curve_chart" style="width: 900px; height: 500px"></div>
         </div>
         <div class="row row-content align-items-center">
-            <p>
-                It's not that we really care about the rich. It just seems fun to watch them panic
-                at this roller-coaster. Sell your 401(k)s please. Anyway, we need a revolution now. 
-                RIGHT NOW. 
-            </p>
+            <div id="curve_chart_tot" style="width: 900px; height: 500px"></div>
+            <h2>Market Cap</h2>
         </div>
         <div class="row row-content align-items-center">
-            <div class="col-12 col-sm-12 col-md-6">
-                <iframe src="https://www.nytimes.com/svc/oembed/html/?url=https%3A%2F%2Fwww.nytimes.com%2F2020%2F03%2F25%2Fbusiness%2Fstock-market-corona.html" 
-                scrolling="no" frameborder="0" allowtransparency="true" 
-                title="Trump May Defer Tariff Payments to Help Businesses: Live Updates" 
-                style="border:none;max-width:500px;min-width:250px;min-height:550px;display:block;width:100%;"
-                class="col-1-1">
-                </iframe>
-            </div>
-            <div class="col-12 col-sm-12 col-md-6">
-                <iframe src="https://www.nytimes.com/svc/oembed/html/?url=https%3A%2F%2Fwww.nytimes.com%2F2020%2F03%2F25%2Fbusiness%2Fstock-market-corona.html" 
-                scrolling="no" frameborder="0" allowtransparency="true" 
-                title="Trump May Defer Tariff Payments to Help Businesses: Live Updates" 
-                style="border:none;max-width:500px;min-width:250px;min-height:550px;display:block;width:100%;"
-                class="col-1-1">
-                </iframe>
-            </div>
+            <h2>Covid v. Market</h2>
+            <div id="curve_chart_covid" style="width: 900px; height: 500px"></div>
         </div>
-        <div class="row row-content align-items-center">
-            <div class="col-12 col-sm-12 col-md-6">
-                <iframe src="https://www.nytimes.com/svc/oembed/html/?url=https%3A%2F%2Fwww.nytimes.com%2F2020%2F03%2F25%2Fbusiness%2Fstock-market-corona.html" 
-                scrolling="no" frameborder="0" allowtransparency="true" 
-                title="Trump May Defer Tariff Payments to Help Businesses: Live Updates" 
-                style="border:none;max-width:500px;min-width:250px;min-height:550px;display:block;width:100%;"
-                class="col-1-1">
-                </iframe>
-            </div>
-            <div class="col-12 col-sm-12 col-md-6">
-                <iframe src="https://www.nytimes.com/svc/oembed/html/?url=https%3A%2F%2Fwww.nytimes.com%2F2020%2F03%2F25%2Fbusiness%2Fstock-market-corona.html" 
-                scrolling="no" frameborder="0" allowtransparency="true" 
-                title="Trump May Defer Tariff Payments to Help Businesses: Live Updates" 
-                style="border:none;max-width:500px;min-width:250px;min-height:550px;display:block;width:100%;"
-                class="col-1-1">
-                </iframe>
-            </div>
-        </div>
-        <div class="row row-content align-items-center">
-            <div class="col-12 col-sm-12 col-md-6">
-                <iframe src="https://www.nytimes.com/svc/oembed/html/?url=https%3A%2F%2Fwww.nytimes.com%2F2020%2F03%2F25%2Fbusiness%2Fstock-market-corona.html" 
-                scrolling="no" frameborder="0" allowtransparency="true" 
-                title="Trump May Defer Tariff Payments to Help Businesses: Live Updates" 
-                style="border:none;max-width:500px;min-width:250px;min-height:550px;display:block;width:100%;"
-                class="col-1-1">
-                </iframe>
-            </div>
-            <div class="col-12 col-sm-12 col-md-6">
-                <iframe src="https://www.nytimes.com/svc/oembed/html/?url=https%3A%2F%2Fwww.nytimes.com%2F2020%2F03%2F25%2Fbusiness%2Fstock-market-corona.html" 
-                scrolling="no" frameborder="0" allowtransparency="true" 
-                title="Trump May Defer Tariff Payments to Help Businesses: Live Updates" 
-                style="border:none;max-width:500px;min-width:250px;min-height:550px;display:block;width:100%;"
-                class="col-1-1">
-                </iframe>
-            </div>
-        </div>
-
-
     </div>
 
     <footer class="footer">
@@ -155,6 +99,8 @@
     <script src="../assets/js/lib/popper.min.js"></script>
     <script src="../assets/js/lib/bootstrap.min.js"></script>
     <script src="../assets/js/stocks.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="../assets/js/getStocks.js"></script>
     <script type="text/javascript" src="../assets/js/scraper.js"></script>
     <script type="text/javascript" src="../assets/js/utils.js"></script>
 </body>
