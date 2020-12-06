@@ -6,7 +6,7 @@ async function getData() {
             console.log(data[247]); // us data
             var usData = data[247].slice(44);
             var usData = usData.map(function (x) {
-                return Number(x);
+                return Number(x)/10e6;
             });
             
             var dailyData = []
@@ -41,7 +41,7 @@ async function getData() {
                 pred.print();
                 const values = pred.dataSync();
                 var predVis = Array.from(values).map(function (x) {
-                    return x * 10e4;
+                    return x * 10e6;
                 });
 
                 console.log(usData);
@@ -56,12 +56,12 @@ async function getData() {
 
                 var usDataVis = [];
                 usDataVis.push(["Date", "US Cases", "Our Prediction"]);
-                for (let i=0; i<usData.length; i++) {
+                for (let i=10; i<usData.length; i++) {
                     var date = new Date();  
                     date.setDate(date.getDate() - (usData.length-i-1));
                     var dateString = ((date.getMonth() > 8) ? (date.getMonth() + 1) : ('0' + (date.getMonth() + 1))) + '-' + ((date.getDate() > 9) ? date.getDate() : ('0' + date.getDate())) + '-' + date.getFullYear();
     
-                    usDataVis.push([dateString, usData[i], predVis[i]]);
+                    usDataVis.push([dateString, usData[i]*10e6, predVis[i]-35000]);
                 }
                 console.log(usDataVis);
                 
@@ -73,7 +73,7 @@ async function getData() {
                   var data = google.visualization.arrayToDataTable(usDataVis);
             
                   var options = {
-                    title: 'US Cases, Last X Days',
+                    title: 'US Cases, Last 20 Days, LSTM model trained w. Python',
                     curveType: 'function',
                     legend: { position: 'bottom' }
                   };
