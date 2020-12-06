@@ -7,7 +7,7 @@ function search(e) {
   document.querySelector('.test').innerHTML = `
   <blockquote class="embedly-card">
     <h4><a href=" ">College News </a ></h4>
-    <p>Latest College Epidemic News</p >
+    <p class="text-justify">Latest College Epidemic News</p >
   </blockquote>
 `
 }
