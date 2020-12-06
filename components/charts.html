@@ -35,16 +35,20 @@
     </nav>
 
     <div class="container">
-        <div class="row row-content align-items-center">
+        <br><br>
+        <div class="row align-items-center">
             <ol class="col-12 breadcrumb">
                 <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
                 <li class="breadcrumb-item active">Charts</li>
             </ol>
-            <div class="col-12" align="center">
-                <h3>Live Charts Based On JHU Data (Yesterday)</h3>
-                    <br>
+        </div>
+        <div class="row row-content">
+            <h3 class="col-12 align-items-center">Live Charts Based On JHU Data (Yesterday)</h3>
+
+            <div class="col-12 align-items-center">
+                <br><br>
                 <p class="text-justify">
-                    Below is the detailed Covid infection data scraped down from JHU’s GitHub repo (<a href="https://github.com/CSSEGISandData/COVID-19">https://github.com/CSSEGISandData/COVID-19</a>). For each specific country/region, there are four columns of data on display: confirmed, deaths, recovered and active. Click the “toggle display” chart to show the entire table.
+                    Below is the detailed Covid infection data scraped down from JHU’s GitHub repo (<a href="https://github.com/CSSEGISandData/COVID-19">https://github.com/CSSEGISandData/COVID-19</a>). For each specific country/region, there are four columns of data on display: confirmed, deaths, recovered and active. Click the “toggle display” button to show the entire table.
                 </p>
                     <br>
                     <div class="loading">
@@ -57,8 +61,12 @@
                         </div>                  
                     </div>    
                 </div>
-    
+            </div>
+            <div class="col-12 align-items-center">
                 <div id="csv-data"></div>    
+            </div>
+            <div class="col-12" align="center">
+                <button type="button" class="btn btn-primary" onclick='contentDisplay("table-hide")'>Toggle Display</button>
             </div>
         </div>
     </div>

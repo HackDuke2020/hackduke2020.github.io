@@ -152,7 +152,6 @@ function arrayToTableComplete(data) {
         html += "</table>";
         html += "</div>";
         html += "<br>"
-        html += '<button type="button" class="btn btn-primary" onclick="contentDisplay(&quot;table-hide&quot;)">Toggle Display</button>';
     }
     return html;
 }
