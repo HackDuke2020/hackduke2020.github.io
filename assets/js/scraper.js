@@ -19,6 +19,14 @@ function scrapeFullJHUData() {
     var oReq = new XMLHttpRequest();
     oReq.onreadystatechange = function() {
         if (this.readyState == XMLHttpRequest.DONE) {
+            var loading = document.getElementsByClassName("loading");
+            console.log(loading);
+            for (let i = 0; i < loading.length; i++) {
+                console.log(loading[i].style)
+                loading[i].style.display = "none";
+            }
+
+
             var data = CSVToArray(this.responseText);
             var table = arrayToTableComplete(data);
             document.getElementById("csv-data").innerHTML = table;

@@ -12,7 +12,6 @@ async function getStocksData() {
         var oReq = new XMLHttpRequest();
         oReq.onreadystatechange = function() {
             if (this.readyState == XMLHttpRequest.DONE) {
-                
                 var CovidData = CSVToArray(this.responseText);
                 CovidData.push(["Date", "Cases", "Deaths"]);
 
@@ -39,6 +38,14 @@ async function getStocksData() {
                 }
                 console.log(resArray);
             
+                var loading = document.getElementsByClassName("loading");
+                console.log(loading);
+                for (let i = 0; i < loading.length; i++) {
+                    console.log(loading[i].style)
+                    loading[i].style.display = "none";
+                }
+
+
                 // Visualize
                 google.charts.load('current', {'packages':['corechart']});
                 google.charts.setOnLoadCallback(drawChart);

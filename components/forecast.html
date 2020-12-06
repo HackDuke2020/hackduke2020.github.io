@@ -44,7 +44,18 @@
         </div>
         <div class="row row-content align-items-center">
             <h2 class="col-12">US COVID Cases</h2>
-            <div id="curve_chart_us_cases" style="width: 1000px; height: 500px"></div>
+            <div class="col loading">
+                <div class="d-flex flex-row">
+                    <div class="p-2">Loading Graph....</div>
+                    <div class="p-2">
+                        <div class="spinner-border text-primary" role="status">
+                            <span class="sr-only">Loading...</span>
+                        </div>
+                    </div>                  
+                </div>
+            </div>
+
+            <div class="col-12" id="curve_chart_us_cases" style="width: 1000px; height: 500px"></div>
         </div>
     </div>
 
