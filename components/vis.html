@@ -163,11 +163,11 @@
                 </div>
 
                 <div class="col-sm-4" style="display:none">
-                  <label for="control_people_speed" data-translate="simulation_people_speed">People speed</label>
+                  <label for="control_people_speed" data-translate="simulation_people_speed">Movement rate</label>
                   <input type="range" id="control_people_speed" class="form-control-range" aria-describedby="control_people_speed_help">
                   <small id="control_people_speed_help" class="form-text text-muted" data-translate="simulation_people_speed_help">
-                    Speed with which people move.<br>
-                    Decrease it to simulate lockdown
+                    How fast individuals move<br>
+                    Decrease to simulate reduced in-person activity levels
                   </small>
                 </div>
               </div>
@@ -177,7 +177,7 @@
                   <label for="control_desease_duration" data-translate="simulation_desease_duration">Disease duration</label>
                   <input type="number" id="control_desease_duration" class="form-control" aria-describedby="control_desease_duration_help">
                   <small id="control_desease_duration_help" class="form-text text-muted" data-translate="simulation_desease_duration_help">
-                    How many days before dying or healing
+                    Length of time period for which infected indivduals are infectious
                   </small>
                 </div>
 
@@ -186,7 +186,7 @@
                   <label for="control_infection_rate"><span data-translate="simulation_infection_rate">Infection rate</span>: <span id="control_infection_rate_text"></span>%</label>
                   <input type="range" id="control_infection_rate" class="form-control-range" aria-describedby="control_infection_rate_help">
                   <small id="control_infection_rate_help" class="form-text text-muted" data-translate="simulation_infection_rate_help">
-                    Probability of successful transmission given a contact between an infected individual and a nearby individual
+                    Probability of successful transmission given a contact between an infected individual and a nearby susceptible individual
                   </small>
                 </div>
 
